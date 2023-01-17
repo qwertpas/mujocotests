@@ -1,0 +1,76 @@
+Mon Jan 16 21:44:02 2023
+ERROR: Load model error: XML parse error 3:
+Error=XML_ERROR_FILE_NOT_FOUND ErrorID=3 (0x3) Line number=0: filename=../src/map1.xml
+
+
+Mon Jan 16 21:44:32 2023
+ERROR: Load model error: XML parse error 3:
+Error=XML_ERROR_FILE_NOT_FOUND ErrorID=3 (0x3) Line number=0: filename=../src/map1.xml
+
+
+Mon Jan 16 21:44:59 2023
+ERROR: Load model error: XML parse error 3:
+Error=XML_ERROR_FILE_NOT_FOUND ErrorID=3 (0x3) Line number=0: filename=../src/map1.xml
+
+
+Mon Jan 16 22:05:02 2023
+ERROR: Load model error: XML parse error 3:
+Error=XML_ERROR_FILE_NOT_FOUND ErrorID=3 (0x3) Line number=0: filename=../src/map1.xml
+
+
+Mon Jan 16 23:39:36 2023
+ERROR: Load model error: XML parse error 3:
+Error=XML_ERROR_FILE_NOT_FOUND ErrorID=3 (0x3) Line number=0: filename=../src/data/satyrr_wholebody.xml
+
+
+Mon Jan 16 23:40:17 2023
+ERROR: Load model error: XML parse error 3:
+Error=XML_ERROR_FILE_NOT_FOUND ErrorID=3 (0x3) Line number=0: filename=../src/data/satyrr_wholebody.xml
+
+
+Mon Jan 16 23:40:33 2023
+ERROR: Load model error: XML parse error 3:
+Error=XML_ERROR_FILE_NOT_FOUND ErrorID=3 (0x3) Line number=0: filename=../src/data/satyrr_wholebody.xml
+
+
+Mon Jan 16 23:43:40 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 1.1870.
+
+Mon Jan 16 23:43:46 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 1.1870.
+
+Mon Jan 16 23:43:54 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 1.1870.
+
+Mon Jan 16 23:44:00 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 1.1870.
+
+Mon Jan 16 23:44:09 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 1.1870.
+
+Mon Jan 16 23:44:19 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 1.1870.
+
+Tue Jan 17 00:23:27 2023
+ERROR: Load model error: XML parse error 6:
+Error=XML_ERROR_PARSING_ELEMENT ErrorID=6 (0x6) Line number=41
+
+
+Tue Jan 17 00:24:50 2023
+ERROR: Load model error: XML parse error 7:
+Error=XML_ERROR_PARSING_ATTRIBUTE ErrorID=7 (0x7) Line number=41: XMLElement name=hfield
+
+
+Tue Jan 17 00:24:58 2023
+ERROR: Load model error: XML parse error 7:
+Error=XML_ERROR_PARSING_ATTRIBUTE ErrorID=7 (0x7) Line number=41: XMLElement name=hfield
+
+
+Tue Jan 17 00:32:37 2023
+ERROR: Load model error: Error: PNG load error 'failed to open file for reading' in hfield id = 0
+Object name = hf1, id = 0, line = 42, column = -1
+
+Tue Jan 17 00:50:34 2023
+ERROR: Load model error: Error: size parameter is not positive in hfield 'hf1' (id = 0)
+Object name = hf1, id = 0, line = 43, column = -1
+

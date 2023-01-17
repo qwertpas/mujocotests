@@ -1,0 +1,51 @@
+<mujoco model="SATYRR_OLD_V2">
+   <compiler eulerseq = "zyx" angle="radian" coordinate="local" meshdir="satyrr_wholebody/"/>
+   <size njmax="-1" nconmax="-1" />
+   <option integrator="RK4" timestep="0.001" solver="PGS"/>
+
+  <default>
+     <geom contype = '0' conaffinity = '0'/>
+     <default class = 'collision-default'>
+        <geom contype = '6' conaffinity = '0'/>
+     </default>
+       <default class = 'collision-group-a'>
+           <geom contype = '2' conaffinity = '4'/>
+       </default>
+       <default class = 'collision-group-b'>
+           <geom contype = '4' conaffinity = '2'/>
+       </default>
+   </default>
+
+   <asset>
+       <mesh name="Torso" file="Torso.STL" />
+       <mesh name="Thigh_R" file="Thigh_R.STL" />
+       <mesh name="Shin_R" file="Shin_R.STL" />
+       <mesh name="Wheel_R" file="Wheel_R.STL" />
+       <mesh name="Thigh_L" file="Thigh_L.STL" />
+       <mesh name="Shin_L" file="Shin_L.STL" />
+       <mesh name="Wheel_L" file="Wheel_L.STL" />
+       <mesh name="Shoulder_U_L" file="Shoulder_U_L.STL" />
+       <mesh name="Shoulder_L" file="Shoulder_L.STL" />
+       <mesh name="Arm_L" file="Arm_L.STL" />
+       <mesh name="Shank_L" file="Shank_L.STL" />
+       <mesh name="Shoulder_U_R" file="Shoulder_U_R.STL" />
+       <mesh name="Shoulder_R" file="Shoulder_R.STL" />
+       <mesh name="Arm_R" file="Arm_R.STL" />
+       <mesh name="Shank_R" file="Shank_R.STL" />
+       <texture builtin="checker" height="512" name="texplane" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" type="2d" width="512"/>
+       <material name="floorplane" reflectance="0.5" texrepeat="1 1" texture="texplane" texuniform="true"/>
+       <material name="matplane" reflectance="0.3" texture="texplane" texrepeat="1 1" texuniform="true"/>
+   </asset>
+
+   <worldbody>
+      <geom class = "collision-default" name="floor0" pos="0.0 0.0 0.0" size="10 10 1" type="plane" condim="3" material="floorplane"></geom>
+      <light directional="true" ambient="0.2 0.2 0.2" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3" castshadow="false" pos="0 0 4" dir="0 0 -1" name="light0"></light>
+
+      <body pos="2 0 0">
+         <inertial pos="0 0 0" mass="10" diaginertia="166.667 166.667 166.667"/>
+         <geom type="box" pos="0 0 0" size="0.1 0.1 0.2" class = "collision-default"/>
+      </body>
+
+   </worldbody>
+
+</mujoco>
