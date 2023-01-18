@@ -40,7 +40,8 @@
 
         <!-- <hfield name='hf1' nrow='10' ncol='10' size="5 5 .2 .1"/> -->
         <!-- <hfield name='hf1' nrow='10' ncol='10' size="5 5 .1 .1"/>  -->
-        <hfield name='hf1' file='/Users/christopherxu/Downloads/mujoco-2.3.1 2/sample/data/terrainhill.png' size="2.5 2.5 .3 .1"/> 
+        <!-- <hfield name='hf1' file='/Users/christopherxu/Downloads/mujoco-2.3.1 2/sample/data/terrainhill.png' size="2.5 2.5 .3 .99"/>  -->
+        <hfield name='hf1' nrow='2' ncol='6' size="2.5 2.5 .3 .99"/> 
         <!--refer to https://github.com/osudrl/cassie-mujoco-sim/blob/master/model/cassie_hfield.xml-->
         <!--for some reason need to use full path for image file-->
 
@@ -50,7 +51,7 @@
         <!-- <geom class = "collision-default" name="floor0" pos="0.0 0.0 0.0" size="10 10 1" type="plane" condim="3" material="floorplane"></geom> -->
 
         <body name='floor' pos='0 0 0'>
-            <geom name='hfield1' pos='2 0 -0.17' hfield='hf1'     type='hfield'                 condim='3' conaffinity='15'/>
+            <geom name='hfield1' pos='2 0 -0.00' hfield='hf1'  type='hfield'      condim='3' conaffinity='15'/>
         </body>
 
 
@@ -81,7 +82,7 @@
                 <geom name="Thigh_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Thigh_R" />
                 <body name="Shin_R" pos="0 -0.080175 -0.15">
                     <inertial pos="0 0 -0.0789246" quat="0.707107 0 0 0.707107" mass="0.394882" diaginertia="0.00112813 0.00112607 0.000173116" />
-                    <joint name="Knee_R" pos="0 0 0" axis="0 -1 0" />
+                    <joint name="Knee_R" pos="0 0 0" axis="0 -1 0"/>
                     <geom name="Shin_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shin_R" />
                     <body name="Wheel_R" pos="0 0 -0.15" quat="0.707107 0 0 -0.707107">
                         <inertial pos="0.0356257 0 0" mass="0.52599" diaginertia="0.000948894 0.000489944 0.000489944" />
@@ -97,7 +98,7 @@
                 <geom name="Thigh_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Thigh_L" />
                 <body name="Shin_L" pos="0 0.080175 -0.15">
                     <inertial pos="0 0 -0.0789246" quat="0.707107 0 0 0.707107" mass="0.394882" diaginertia="0.00112813 0.00112607 0.000173116" />
-                    <joint name="Knee_L" pos="0 0 0" axis="0 -1 0" />
+                    <joint name="Knee_L" pos="0 0 0" axis="0 -1 0"  />
                     <geom name="Shin_geom_L "class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shin_L" />
                     <body name="Wheel_L" pos="0 0 -0.15">
                         <inertial pos="0 0.0363743 0" quat="0.707107 0 0 0.707107" mass="0.52599" diaginertia="0.000948894 0.000489944 0.000489944" />
@@ -159,16 +160,12 @@
             </body> 
         </body>
 
-		<body name='worker' pos='3.5 0 0'>
+		<body name='worker' pos='0.6 0 0.5'>
             <inertial pos="0 0 0" mass="15" diaginertia="15 15 15"/>
-			<geom type='box' size='.25 .25 .5' rgba='.3 .8 .7 1' class = 'collision-default'/>
-			<joint name='workerx' type='slide' axis='1 0 0' limited='true' range='-100000000 100000000 ' frictionloss="15"/>
-		</body>  
+			<geom type='box' size='.25 .25 .25' rgba='.3 .8 .7 1' class = 'collision-default'/>
+            <joint type="free" stiffness="0" damping="0" frictionloss="0" armature="0"/>
 
-        <body name='worker2' pos='3.5 0 0'>
-            <inertial pos="0 0 2" mass="15" diaginertia="15 15 15"/>
-			<geom type='box' size='.25 .25 .5' rgba='.3 .8 .7 1' class = 'collision-default'/>
-			<joint name='workerx2' type='slide' axis='1 0 0' limited='true' range='-100000000 100000000 ' frictionloss="15"/>
+			<!-- <joint name='workerx' type='slide' axis='1 0 0' limited='true' range='-100000000 100000000 ' frictionloss="15"/> -->
 		</body>  
 
 
