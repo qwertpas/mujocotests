@@ -130,3 +130,32 @@ WARNING: Nan, Inf or huge value in QVEL at DOF 4. The simulation is unstable. Ti
 Tue Jan 17 13:09:05 2023
 WARNING: Nan, Inf or huge value in QVEL at DOF 4. The simulation is unstable. Time = 0.3870.
 
+Tue Jan 24 14:11:39 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 6. The simulation is unstable. Time = 0.0040.
+
+Tue Jan 24 14:12:27 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 0.5050.
+
+Tue Jan 24 14:14:25 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 0.1530.
+
+Tue Jan 24 14:14:25 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 19. The simulation is unstable. Time = 0.0380.
+
+Tue Jan 24 14:14:40 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 0.1530.
+
+Tue Jan 24 14:14:40 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 19. The simulation is unstable. Time = 0.0380.
+
+Tue Jan 24 14:16:14 2023
+ERROR: Load model error: XML parse error 14:
+Error=XML_ERROR_MISMATCHED_ELEMENT ErrorID=14 (0xe) Line number=50: XMLElement name=worldbody
+
+
+Tue Jan 24 14:17:34 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 0.0030.
+
+Tue Jan 24 14:17:34 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0040.
+
