@@ -722,16 +722,21 @@ void mycontroller(const mjModel* m, mjData* d)
     SATYRR_Cont.applied_torq[2] =  wheel_torque - yaw_torq + tau_ff; // Left wheel_torque;
     SATYRR_Cont.applied_torq[5] =  wheel_torque + yaw_torq + tau_ff; //Right wheel_torque;
 
+    int enabled = 0;
     //Applied torque
-    if (d->time - last_update > 1.0/ctrl_update_freq)
+    if (d->time - last_update > 1.0/ctrl_update_freq && enabled)
     {
         //Lower body control
         d->ctrl[0] = -SATYRR_Cont.applied_torq[0];
         d->ctrl[1] = -SATYRR_Cont.applied_torq[1];
-        d->ctrl[2] = -SATYRR_Cont.applied_torq[2];
+        // d->ctrl[2] = -SATYRR_Cont.applied_torq[2];
         d->ctrl[3] = -SATYRR_Cont.applied_torq[3];
         d->ctrl[4] = -SATYRR_Cont.applied_torq[4];
-        d->ctrl[5] = -SATYRR_Cont.applied_torq[5];
+        // d->ctrl[5] = -SATYRR_Cont.applied_torq[5];
+
+        d->ctrl[2] = -2;
+        d->ctrl[5] = 2;
+
 
         //Left shoulder yaw control
         d->ctrl[6] = 0;
@@ -760,10 +765,10 @@ void mycontroller(const mjModel* m, mjData* d)
         d->ctrl[21] = 0;
 
         //Fixed positon for pushing if needed
-        // d->ctrl[10] = -0.75;
-        // d->ctrl[12] = -3.14;
-        // d->ctrl[18] = 0.75;
-        // d->ctrl[20] = 3.14;
+        d->ctrl[10] = -0.75;
+        d->ctrl[12] = -3.14;
+        d->ctrl[18] = 0.75;
+        d->ctrl[20] = 3.14;
     }
 
     //Update data to send back 

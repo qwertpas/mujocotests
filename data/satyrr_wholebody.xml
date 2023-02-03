@@ -18,22 +18,22 @@
 
     <asset>
         <mesh name="Torso" file="Torso.STL" />
-        <mesh name="Thigh_R" file="Thigh_R.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Shin_R" file="Shin_R.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Wheel_R" file="Wheel_R.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Thigh_L" file="Thigh_L.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Shin_L" file="Shin_L.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Wheel_L" file="Wheel_L.STL" scale="0.1 0.1 0.1"/>
+        <mesh name="Thigh_R" file="Thigh_R.STL"/>
+        <mesh name="Shin_R" file="Shin_R.STL"/>
+        <mesh name="Wheel_R" file="Wheel_R.STL"/>
+        <mesh name="Thigh_L" file="Thigh_L.STL"/>
+        <mesh name="Shin_L" file="Shin_L.STL"/>
+        <mesh name="Wheel_L" file="Wheel_L.STL"/>
         <mesh name="Shoulder_U_L" file="Shoulder_U_L.STL" />
         <mesh name="Shoulder_L" file="Shoulder_L.STL" />
-        <mesh name="Arm_L" file="Arm_L.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Shank_L" file="Shank_L.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Shoulder_U_R" file="Shoulder_U_R.STL" scale=" 1 1 1"/>
-        <mesh name="Shoulder_R" file="Shoulder_R.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Arm_R" file="Arm_R.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Shank_R" file="Shank_R.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Hand_L" file="Hand_L.STL" scale="0.1 0.1 0.1"/>
-        <mesh name="Hand_R" file="Hand_R.STL" scale="0.1 0.1 0.1"/>
+        <mesh name="Arm_L" file="Arm_L.STL"/>
+        <mesh name="Shank_L" file="Shank_L.STL"/>
+        <mesh name="Shoulder_U_R" file="Shoulder_U_R.STL"/>
+        <mesh name="Shoulder_R" file="Shoulder_R.STL"/>
+        <mesh name="Arm_R" file="Arm_R.STL"/>
+        <mesh name="Shank_R" file="Shank_R.STL"/>
+        <mesh name="Hand_L" file="Hand_L.STL"/>
+        <mesh name="Hand_R" file="Hand_R.STL"/>
         <texture builtin="checker" height="512" name="texplane" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" type="2d" width="512"/>
         <material name="floorplane" reflectance="0.5" texrepeat="1 1" texture="texplane" texuniform="true"/>
         <material name="matplane" reflectance="0.3" texture="texplane" texrepeat="1 1" texuniform="true"/>
@@ -51,7 +51,7 @@
         <!-- <geom class = "collision-default" name="floor0" pos="0.0 0.0 0.0" size="10 10 1" type="plane" condim="3" material="floorplane"></geom> -->
 
         <body name='floor' pos='0 0 0'>
-            <geom name='hfield1' pos='2 0 -1.00' hfield='hf1'  type='hfield'      condim='3' conaffinity='15'/>
+            <geom name='hfield1' pos='2 0 0.00' hfield='hf1'  type='hfield'      condim='3' conaffinity='15'/>
         </body>
 
 
@@ -61,9 +61,9 @@
 		<!-- camera: front view -->
         <!-- <camera name="camera1" mode="targetbody" target="torso"/> -->
 
-        <body name="torso" pos="0 0.0 0">
+        <body name="torso" pos="0 0 0.5">
             <!--<joint armature="0" damping="0" limited="false" name="robot" pos="0 0 0.0" stiffness="0" type="free"/> -->
-            <joint type = "free" limited = "false"/>
+            <!-- <joint type = "free" limited = "false"/> -->
 			
             <geom class = 'collision-group-b' friction="0.9" type="mesh" rgba="0.79216 0.81961 0.93333 1" mesh="Torso" mass="4.05" />
  
@@ -72,34 +72,34 @@
             <!-- <site name="camera_vr" pos="-0.30 0 1.2"/> -->
             <!-- <site name="camera_vr" pos="0.0 0 1.2"/> -->
 
-            <body name="Thigh_R" pos="-0.06625 0 0.36">
-                <inertial pos="0 -0.080175 -0.0380315" quat="0.707107 0 0 0.707107" mass="0.904864" diaginertia="0.00325713 0.00280128 0.000871858" />
-                <joint name="Hip_R" pos="0 0 0" axis="0 -1 0" />
-                <!-- <geom name="Thigh_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Thigh_R" /> -->
-                <body name="Shin_R" pos="0 -0.080175 -0.15">
-                    <inertial pos="0 0 -0.0789246" quat="0.707107 0 0 0.707107" mass="0.394882" diaginertia="0.00112813 0.00112607 0.000173116" />
-                    <joint name="Knee_R" pos="0 0 0" axis="0 -1 0"/>
-                    <!-- <geom name="Shin_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shin_R" /> -->
-                    <body name="Wheel_R" pos="0 0 -0.15" quat="0.707107 0 0 -0.707107">
-                        <inertial pos="0.0356257 0 0" mass="0.52599" diaginertia="0.000948894 0.000489944 0.000489944" />
-                        <joint name="Ankle_R" pos="0 0 0" axis="1 0 0" />
-                        <!-- <geom name="Wheel_geom_R" class = 'collision-group-a' friction = "0 0.0 0.0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="Wheel_R" /> -->
+            <body name="Thigh_R" pos="0 0 0">
+                <inertial pos="0  0 0" mass="0.904864" diaginertia="0.00325713 0.00280128 0.000871858" />
+                <joint name="Hip_R" pos="-0.00885 -0.0993 -0.0408" axis="0 -1 0" frictionloss="1" stiffness="1000" damping="10"/>
+                <geom name="Thigh_geom_R" type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Thigh_R" />
+                <body name="Shin_R" pos="0 0 0">
+                    <inertial pos="-0.0112 -0.076 -0.235" mass="0.394882" diaginertia="0.00112813 0.00112607 0.000173116" />
+                    <joint name="Knee_R" pos="-0.1072 0.0902 -0.1541" axis="0 -1 0"  frictionloss="0.1" stiffness="1000" damping="10"/>
+                    <geom name="Shin_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shin_R" />
+                    <body name="Wheel_R" pos="0 0 0">
+                        <inertial pos="0.0061 -0.116 -0.252" mass="0.52599" diaginertia="0.000948894 0.000489944 0.000489944" />
+                        <joint name="Ankle_R" pos="0.0061 -0.116 -0.252" axis="0 -1 0" frictionloss="0.1"/>
+                        <geom name="Wheel_geom_R" class = 'collision-group-a' friction = "0 0.0 0.0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="Wheel_R" />
                     </body>
                 </body>
             </body>
 
-            <body name="Thigh_L" pos="-0.06625 0 0.36">
-                <inertial pos="0 0.080175 -0.0380315" quat="0.707107 0 0 0.707107" mass="0.904864" diaginertia="0.00325713 0.00280128 0.000871858" />
-                <joint name="Hip_L" pos="0 0 0" axis="0 -1 0" />
-                <!-- <geom name="Thigh_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Thigh_L" /> -->
-                <body name="Shin_L" pos="0 0.080175 -0.15">
-                    <inertial pos="0 0 -0.0789246" quat="0.707107 0 0 0.707107" mass="0.394882" diaginertia="0.00112813 0.00112607 0.000173116" />
-                    <joint name="Knee_L" pos="0 0 0" axis="0 -1 0"  />
-                    <!-- <geom name="Shin_geom_L "class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shin_L" /> -->
-                    <body name="Wheel_L" pos="0 0 -0.15">
-                        <inertial pos="0 0.0363743 0" quat="0.707107 0 0 0.707107" mass="0.52599" diaginertia="0.000948894 0.000489944 0.000489944" />
-                        <joint name="Ankle_L" pos="0 0 0" axis="0 -1 0" />
-                        <!-- <geom name="Wheel_geom_L" class = 'collision-group-b' friction = "1 0.0 0.0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="Wheel_L" /> -->
+            <body name="Thigh_L" pos="0 0 0">
+                <inertial pos="0 0.080175 -0.0380315" mass="0.904864" diaginertia="0.00325713 0.00280128 0.000871858" />
+                <joint name="Hip_L" pos="-0.00885 -0.0993 -0.0408" axis="0 -1 0"  frictionloss="0.1" stiffness="1000"/>
+                <geom name="Thigh_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Thigh_L" />
+                <body name="Shin_L" pos="0 0 0">
+                    <inertial pos="-0.0112 -0.076 -0.235" mass="0.394882" diaginertia="0.00112813 0.00112607 0.000173116" />
+                    <joint name="Knee_L" pos="-0.1072 0.0902 -0.1541" axis="0 -1 0" frictionloss="0.1" />
+                    <geom name="Shin_geom_L "class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shin_L" />
+                    <body name="Wheel_L" pos="0 0 0">
+                        <inertial pos="0.0061 -0.116 -0.252" mass="0.52599" diaginertia="0.000948894 0.000489944 0.000489944" />
+                        <joint name="Ankle_L" pos="0.0061 -0.116 -0.252" axis="0 -1 0" frictionloss="0.1"/>
+                        <geom name="Wheel_geom_L" class = 'collision-group-b' friction = "1 0.0 0.0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="Wheel_L" />
                     </body>
                 </body>
             </body>
@@ -108,21 +108,20 @@
                 <inertial pos="5.98242e-08 -3.82379e-09 0.0467603" quat="0.5 0.5 0.5 0.5" mass="0.246892" diaginertia="0.0012863 0.00103844 0.00030284" />
                 <joint name="Shoulder_yaw_L" pos="0 0 0" axis="0 1 0" />
                 <geom name="Shoulder_U_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shoulder_U_L" />
-                <body name="Shoulder_L" pos="0 0 0.114214">
+                <body name="Shoulder_L" pos="0 0 0">
                     <inertial pos="-7.6505e-09 4.57848e-09 2.98572e-10" quat="0.500001 0.499999 0.499999 0.500001" mass="0.225611" diaginertia="0.000280653 0.000166998 0.000150663" />
                     <joint name="Shoulder_roll_L" pos="0 0 0" axis="1 0 0" />
-                    <!-- <geom name="Shoulder_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shoulder_L" /> -->
+                    <geom name="Shoulder_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shoulder_L" />
                     <body name="Arm_L" pos="0 0 0">
                         <inertial pos="0 0.0494924 -0.061196" quat="0.707074 0.00680441 -0.00680441 0.707074" mass="0.584971" diaginertia="0.00283895 0.00259254 0.000369078" />
                         <joint name="Shoulder_pitch_L" pos="0 0 0" axis="0 1 0" />
-                        <!-- <geom name="Arm_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Arm_L" /> -->
-                        <body name="Shank_L" pos="0 0.05082 -0.204">
+                        <geom name="Arm_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Arm_L" />
+                        <body name="Shank_L" pos="0 0 0">
                             <inertial pos="9.76797e-09 0 -0.0687371" quat="0.707107 0 0 0.707107" mass="0.111225" diaginertia="0.000216628 0.00021518 1.39816e-05" />
                             <joint name="Elbow_L" pos="0 0 0" axis="0 1 0" />
-                            <!-- <geom name="Shank_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shank_L" /> -->
-                            <!-- <body name="hand_L" pos="0 0 -0.14"> -->
-                            <body name="Hand_L" pos="0 0 -0.14">
-                                <!-- <geom name="Hand_geo_L" class = 'collision-group-b' type="mesh" rgba="1 1 1 0.6" mesh="Hand_L"/> -->
+                            <geom name="Shank_geom_L" class = 'collision-group-b' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shank_L" />
+                            <body name="Hand_L" pos="0 0 0">
+                                <geom name="Hand_geo_L" class = 'collision-group-b' type="mesh" rgba="1 1 1 0.6" mesh="Hand_L"/>
                                 <site name="sensor_hand_L" pos="0 0 0" size=".016 .016 .016" type="sphere"/>
                             </body>
                         </body>
@@ -130,23 +129,23 @@
                 </body>
             </body>
             
-            <body name="Shoulder_U_R" pos="-0.2 0 0">
+            <body name="Shoulder_U_R" pos="0 0 0">
                 <inertial pos="5.98242e-08 -3.82379e-09 0.0467603" quat="0.5 0.5 0.5 0.5" mass="0.246892" diaginertia="0.0012863 0.00103844 0.00030284" />
                 <joint name="Shoulder_yaw_R" pos="0 0 0" axis="0 0 1" />
-                <geom name="Shoulder_U_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shoulder_U_R" />
-                <body name="Shoulder_R" pos="0 0 0.114214">
+                <geom name="Shoulder_U_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shoulder_U_R"/>
+                <body name="Shoulder_R" pos="0 0 0">
                     <inertial pos="-7.6505e-09 4.57848e-09 2.98572e-10" quat="0.500001 0.499999 0.499999 0.500001" mass="0.225611" diaginertia="0.000280653 0.000166998 0.000150663" />
                     <joint name="Shoulder_roll_R" pos="0 0 0" axis="1 0 0" />
-                    <!-- <geom name="Shoulder_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shoulder_R" /> -->
+                    <geom name="Shoulder_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shoulder_R" />
                     <body name="Arm_R" pos="0 0 0">
-                        <inertial pos="0 -0.0494924 -0.061196" quat="0.707074 -0.00680441 0.00680441 0.707074" mass="0.584971" diaginertia="0.00283895 0.00259254 0.000369078" />
+                        <inertial pos="0 0 0" quat="0.707074 -0.00680441 0.00680441 0.707074" mass="0.584971" diaginertia="0.00283895 0.00259254 0.000369078" />
                         <joint name="Shoulder_pitch_R" pos="0 0 0" axis="0 -1 0" />
-                        <!-- <geom name="Arm_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Arm_R" /> -->
-                        <body name="Shank_R" pos="0 -0.05082 -0.204">
+                        <geom name="Arm_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Arm_R" />
+                        <body name="Shank_R" pos="0 0 0">
                             <inertial pos="-9.76797e-09 0 -0.0687371" quat="0.707107 0 0 0.707107" mass="0.111225" diaginertia="0.000216628 0.00021518 1.39816e-05" />
                             <joint name="Elbow_R" pos="0 0 0" axis="0 -1 0" />
-                            <!-- <geom name="Shank_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shank_R" /> -->
-                            <body name="Hand_R" pos="0 0 -0.14">
+                            <geom name="Shank_geom_R" class = 'collision-group-a' type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="Shank_R" />
+                            <body name="Hand_R" pos="0 0 0">
                                 <geom name="Hand_geo_R" class = 'collision-group-b' type="mesh" rgba="1 1 1 0.6" mesh="Hand_R"/>
                                 <site name="sensor_hand_R" pos="0 0 0" size=".016 .016 .016" type="sphere"/>
                             </body>

@@ -159,3 +159,43 @@ WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Ti
 Tue Jan 24 14:17:34 2023
 WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0040.
 
+Tue Jan 24 14:36:19 2023
+ERROR: Load model error: XML Error: Schema violation: unrecognized attribute: 'scale'
+
+Element 'geom', line 136
+
+
+Mon Jan 30 14:17:04 2023
+ERROR: Load model error: Error: number of faces should be between 1 and 200000 in STL file 'data/satyrr_wholebody/Shoulder_L.STL'; perhaps this is an ASCII file?
+Object name = Shoulder_L, id = 8, line = 28, column = -1
+
+Mon Jan 30 14:25:53 2023
+ERROR: Load model error: Error: unknown transmission target 'Shoulder_yaw_L' for actuator id = 6
+Object name = , id = 6, line = 186, column = -1
+
+Thu Feb  2 14:25:52 2023
+ERROR: Load model error: Error: unknown transmission target 'Shoulder_yaw_R' for actuator id = 14
+Object name = , id = 14, line = 195, column = -1
+
+Thu Feb  2 15:10:16 2023
+ERROR: Load model error: XML Error: attribute 'quat' does not have enough data
+Element 'body', line 83
+
+
+Thu Feb  2 15:27:27 2023
+ERROR: Load model error: XML Error: Schema violation: unrecognized attribute: 'friction'
+
+Element 'joint', line 85
+
+
+Thu Feb  2 15:50:42 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 4. The simulation is unstable. Time = 12.3340.
+
+Thu Feb  2 18:37:12 2023
+ERROR: Load model error: XML parse error 7:
+Error=XML_ERROR_PARSING_ATTRIBUTE ErrorID=7 (0x7) Line number=77: XMLElement name=joint
+
+
+Thu Feb  2 18:37:22 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0050.
+
