@@ -199,3 +199,102 @@ Error=XML_ERROR_PARSING_ATTRIBUTE ErrorID=7 (0x7) Line number=77: XMLElement nam
 Thu Feb  2 18:37:22 2023
 WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0050.
 
+Sat Feb  4 10:59:30 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0050.
+
+Sat Feb  4 10:59:46 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0050.
+
+Sat Feb  4 11:00:11 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0050.
+
+Sat Feb  4 11:00:26 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0060.
+
+Sat Feb  4 11:00:36 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0060.
+
+Sat Feb  4 11:00:51 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0060.
+
+Sat Feb  4 11:00:58 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0060.
+
+Sat Feb  4 11:26:41 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 2. The simulation is unstable. Time = 0.0020.
+
+Sat Feb  4 11:27:48 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 35.7800.
+
+Sat Feb  4 11:27:58 2023
+WARNING: Nan, Inf or huge value in QPOS at DOF 2. The simulation is unstable. Time = 32.6060.
+
+Sat Feb  4 11:29:09 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 35.7520.
+
+Sat Feb  4 11:29:16 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 12. The simulation is unstable. Time = 35.8190.
+
+Sat Feb  4 11:41:09 2023
+ERROR: Load model error: Error: unknown transmission target 'Shoulder_yaw_L' for actuator id = 6
+Object name = , id = 6, line = 189, column = -1
+
+Sat Feb  4 11:41:38 2023
+ERROR: Load model error: Error: unrecognized name of sensorized object in sensor 'touchsensor_L' (id = 1)
+Object name = touchsensor_L, id = 1, line = 210, column = -1
+
+Sat Feb  4 12:20:52 2023
+ERROR: Load model error: Error: mass and inertia of moving bodies must be larger than mjMINVAL
+Object name = Shoulder_U_L, id = 8, line = 111, column = -1
+
+Mon Feb  6 13:06:47 2023
+ERROR: Load model error: Error: mass and inertia of moving bodies must be larger than mjMINVAL
+Object name = Shoulder_L, id = 9, line = 115, column = -1
+
+Mon Feb  6 14:50:50 2023
+ERROR: Load model error: Error: inertia must satisfy A + B >= C; use 'balanceinertia' to fix
+Object name = Shoulder_U_R, id = 13, line = 136, column = -1
+
+Mon Feb  6 14:51:20 2023
+ERROR: Load model error: Error: inertia must satisfy A + B >= C; use 'balanceinertia' to fix
+Object name = Shoulder_U_L, id = 8, line = 111, column = -1
+
+Mon Feb  6 14:51:53 2023
+ERROR: Load model error: Error: inertia must satisfy A + B >= C; use 'balanceinertia' to fix
+Object name = Shoulder_U_L, id = 8, line = 111, column = -1
+
+Mon Feb  6 16:28:19 2023
+WARNING: Nan, Inf or huge value in QPOS at DOF 13. The simulation is unstable. Time = 0.0020.
+
+Mon Feb  6 16:29:25 2023
+ERROR: Load model error: XML parse error 14:
+Error=XML_ERROR_MISMATCHED_ELEMENT ErrorID=14 (0xe) Line number=50: XMLElement name=worldbody
+
+
+Mon Feb  6 16:29:35 2023
+WARNING: Nan, Inf or huge value in QPOS at DOF 15. The simulation is unstable. Time = 0.0020.
+
+Mon Feb  6 16:29:35 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 0.0030.
+
+Mon Feb  6 16:29:47 2023
+WARNING: Nan, Inf or huge value in QPOS at DOF 15. The simulation is unstable. Time = 0.0020.
+
+Mon Feb  6 16:29:47 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 0.0030.
+
+Mon Feb  6 16:30:08 2023
+WARNING: Nan, Inf or huge value in QPOS at DOF 15. The simulation is unstable. Time = 0.0020.
+
+Mon Feb  6 16:30:08 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 0.0030.
+
+Mon Feb  6 16:31:28 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0020.
+
+Mon Feb  6 16:31:31 2023
+WARNING: Nan, Inf or huge value in QVEL at DOF 0. The simulation is unstable. Time = 2.5200.
+
+Mon Feb  6 16:31:36 2023
+WARNING: Nan, Inf or huge value in QACC at DOF 0. The simulation is unstable. Time = 0.0020.
+
